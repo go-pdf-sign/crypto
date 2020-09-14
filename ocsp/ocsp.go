@@ -22,7 +22,6 @@ import (
 	"encoding/asn1"
 	"errors"
 	"fmt"
-	"log"
 	"math/big"
 	"strconv"
 	"time"
@@ -460,7 +459,7 @@ func ParseRequest(bytes []byte) (*Request, error) {
 // Error responses will result in a ResponseError.
 func ParseResponse(bytes []byte, issuer *x509.Certificate) (*Response, error) {
 
-	log.Println("using go-pdf-sign/crypto/ocsp/ocsp.go")
+	//log.Println("using go-pdf-sign/crypto/ocsp/ocsp.go")
 
 	return ParseResponseForCert(bytes, nil, issuer)
 }
